@@ -1,0 +1,46 @@
+
+// Bootstrap Theming Customization
+
+$primary:#203B2C;
+$secondary:#BEBFC4;
+$kismat:#30CC64;
+$success:#198754;
+$info:#11caf0;
+$warning:#E9C662;
+$danger:#dc3545;
+$light:#f8f9fa;
+$white:#ffffff;
+$dark:#060E10;
+
+$darkBg:#171717;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "kismat":    $kismat,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "white":      $white,
+  "dark":       $dark
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+  xxl: 1500px
+);
+
+
+$br:.25rem;
+
+$lgNavbarHeight: 4.5rem;
+$lpLogoHeight:2.5rem;
+
+// Images
+$sectionShowsBg:url(../imgs/parallax/bg-parallax-show.png);
+$paymentPageBg:url(../imgs/bg-image-grid.png);

@@ -1,0 +1,34 @@
+ng-otp-input {
+  &.otp-input {
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .otp-input {
+        border: none;
+        border-bottom: 2px solid transparent;
+        border-radius: 0;
+        background: rgba($white, .1);
+        color: $white;
+        box-shadow: none;
+
+        &.ng-dirty {
+          border-bottom-color: $success;
+        }
+
+        &:focus-visible {
+          outline: $success solid 2px;
+        }
+      }
+
+      @media (min-width:992px) {
+        .otp-input {
+          width: 5rem;
+          height: 5rem;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
