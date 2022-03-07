@@ -18,19 +18,22 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const express = __importStar(require("express"));
-const router = express.Router();
-const user_router_1 = __importDefault(require("./modals_and_controls/user/user.router"));
-const teams_router_1 = __importDefault(require("./modals_and_controls/teams/teams.router"));
-// const passport = require("passport")
-// const authenticate = passport.authenticate('jwt', { session: false })
-router.use('/user', user_router_1.default);
-router.use("/teams", teams_router_1.default);
-// router.use('/payment', paymentroutes);
-// routes.use('/material', authenticate, materialrouts);
-exports.default = router;
-//# sourceMappingURL=routes.js.map
+exports.teams = void 0;
+const mongoose = __importStar(require("mongoose"));
+exports.teams = mongoose.model('teams', new mongoose.Schema({
+    created_by: {
+        email: { type: String, required: true },
+        username: { type: String, required: true },
+    },
+    name: { type: String, required: true },
+    about: { type: String },
+    members: [{
+            email: { type: String },
+            username: { type: String },
+        }],
+    active: { type: Boolean, default: true },
+    cdate: { type: Date },
+    udate: { type: Date }
+}));
+//# sourceMappingURL=teams.schema.js.map

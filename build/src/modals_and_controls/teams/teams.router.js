@@ -23,14 +23,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = __importStar(require("express"));
-const router = express.Router();
-const user_router_1 = __importDefault(require("./modals_and_controls/user/user.router"));
-const teams_router_1 = __importDefault(require("./modals_and_controls/teams/teams.router"));
-// const passport = require("passport")
-// const authenticate = passport.authenticate('jwt', { session: false })
-router.use('/user', user_router_1.default);
-router.use("/teams", teams_router_1.default);
-// router.use('/payment', paymentroutes);
-// routes.use('/material', authenticate, materialrouts);
-exports.default = router;
-//# sourceMappingURL=routes.js.map
+const root = express.Router();
+const teams_ctrl_1 = __importDefault(require("./teams.ctrl"));
+root.post('/create', teams_ctrl_1.default.createteams);
+root.post('/get', teams_ctrl_1.default.getteams);
+root.post('/delete', teams_ctrl_1.default.deleteteams);
+root.post('/update', teams_ctrl_1.default.updateteams);
+root.post('/deletetemp', teams_ctrl_1.default.deleteteamtemporary);
+root.post('/addteammem', teams_ctrl_1.default.addteammembers);
+root.post('/removeteammem', teams_ctrl_1.default.removeteammembers);
+exports.default = root;
+//# sourceMappingURL=teams.router.js.map

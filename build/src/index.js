@@ -37,15 +37,15 @@ const PORT = parseInt(process.env.PORT, 10);
 const app = (0, express_1.default)();
 (0, mongoose_service_1.default)();
 app.use((0, helmet_1.default)({ contentSecurityPolicy: false }));
-// app.use(cors());
-app.options('*', cors_1.default);
-var allowCrossDomain = function (req, res, next) {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-};
-app.use(allowCrossDomain);
+app.use((0, cors_1.default)());
+// app.options('*', cors);
+// var allowCrossDomain = function (req: Request, res: Response, next: NextFunction) {
+//     res.header('Access-Control-Allow-Origin', '*');
+//     res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
+//     res.header('Access-Control-Allow-Headers', 'Content-Type');
+//     next();
+// }
+// app.use(allowCrossDomain);
 app.use(express_1.default.json());
 //routes
 app.use('/api', routes_1.default);

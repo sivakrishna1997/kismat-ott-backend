@@ -10,7 +10,12 @@ const userformatter = (user) => {
         email: user.email ? user.email : null,
         mobile: user.mobile ? user.mobile : null,
         role: user.role ? user.role : null,
-        active: user.active ? user.active : null,
+        terms_conditions: user.terms_conditions ? user.terms_conditions : null,
+        provider: user.provider ? user.provider : null,
+        photo_url: user.photo_url ? user.photo_url : null,
+        uid: user.uid ? user.uid : null,
+        email_verified: user.email_verified,
+        active: user.active,
         cdate: user.cdate ? user.cdate : null,
         udate: user.udate ? user.udate : null,
     };

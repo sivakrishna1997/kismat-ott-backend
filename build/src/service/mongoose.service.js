@@ -6,12 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 function mongodb() {
     const options = {
-        dbName: 'talktsy',
+        dbName: 'kismat',
         autoIndex: true
     };
-    let url = "mongodb://localhost:27017/talktsy";
+    let url = "mongodb://localhost:27017/kismat";
     mongoose_1.default.connect(url, options).then(response => {
-        console.log('DB connected! "talktsy"');
+        console.log('DB connected! "kismat"');
     }, err => {
         console.log(err);
     });
