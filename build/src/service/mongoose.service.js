@@ -9,7 +9,8 @@ function mongodb() {
         dbName: 'kismat',
         autoIndex: true
     };
-    let url = "mongodb://localhost:27017/kismat";
+    // let url = "mongodb://localhost:27017/kismat";
+    let url = "mongodb+srv://tal:tal@cluster0.jmvgw.mongodb.net/kismat";
     mongoose_1.default.connect(url, options).then(response => {
         console.log('DB connected! "kismat"');
     }, err => {
