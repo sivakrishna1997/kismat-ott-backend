@@ -8,33 +8,52 @@
   justify-content: center;
   gap: .5rem;
 }
-.section-title{
+
+.section-title {
   display: flex;
   align-items: center;
-  .title-left{
+
+  .title-left {
     flex: 1 1 auto;
   }
-  .title-right{
-    .link{
+
+  .title-right {
+    .link {
       color: $white;
       font-size: 1rem;
       text-decoration: none;
       @include transition;
-      &:hover{
+
+      &:hover {
         color: $kismat;
       }
     }
   }
 }
 
-.dropdown-toggle {
-  &::after {
-    content: "\eb88";
-    font-family: 'fluenticons' !important;
-    border: none;
-    font-size: 1.25em;
-  }
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $dark;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $kismat;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lighten($kismat, 10);
+}
+
 
 ::-moz-selection {
   /* Code for Firefox */
